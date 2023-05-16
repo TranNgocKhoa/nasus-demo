@@ -1,5 +1,6 @@
 package io.github.tranngockhoa.demo.server.config;
 
+import io.github.tranngockhoa.demo.server.handler.DataHandler;
 import io.github.tranngockhoa.demo.server.handler.HealthHandler;
 import io.github.tranngockhoa.demo.server.handler.HomeHandler;
 import io.github.tranngockhoa.nasus.api.annotation.Bean;
@@ -20,10 +21,16 @@ public class RoutingConfiguration {
     }
 
     @Bean
-    public RoutingHandler getRoutes(HomeHandler homeHandler, HealthHandler healthHandler) {
+    public DataHandler dataHandler() {
+        return new DataHandler();
+    }
+
+    @Bean
+    public RoutingHandler getRoutes(HomeHandler homeHandler, HealthHandler healthHandler, DataHandler dataHandler) {
         return Handlers.routing()
                 .get("/", homeHandler)
-                .get("/health", healthHandler);
+                .get("/health", healthHandler)
+                .get("/data", dataHandler);
     }
 
 }
