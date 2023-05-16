@@ -10,10 +10,11 @@ repositories {
         url 'https://s01.oss.sonatype.org/content/repositories/releases'
     }
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
-    implementation 'io.github.tranngockhoa:nasus:0.0.1'
+    implementation 'io.github.tranngockhoa:nasus:0.0.3'
     implementation 'io.undertow:undertow-core:2.3.5.Final'
 }
 
