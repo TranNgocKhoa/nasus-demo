@@ -6,14 +6,15 @@ group 'io.github.tranngockhoa'
 version '1.0-SNAPSHOT'
 
 repositories {
-    mavenCentral()
     maven {
         url 'https://s01.oss.sonatype.org/content/repositories/releases'
     }
+    mavenCentral()
 }
 
 dependencies {
     implementation 'io.github.tranngockhoa:nasus:0.0.1'
+    implementation 'io.undertow:undertow-core:2.3.5.Final'
 }
 
 test {
