@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.github.tranngockhoa:nasus:0.0.3'
+    implementation 'io.github.tranngockhoa:nasus:0.0.4'
     implementation 'io.undertow:undertow-core:2.3.5.Final'
 }
 
