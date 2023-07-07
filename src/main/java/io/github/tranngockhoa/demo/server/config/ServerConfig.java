@@ -16,11 +16,6 @@ import java.util.List;
 public class ServerConfig {
 
     @Bean
-    public String handlerPackage() {
-        return "io.github.tranngockhoa.demo.server.handler";
-    }
-
-    @Bean
     public Undertow getServer(String handlerPackage) {
         List<Class<?>> classesInPackage = ClassLoader.getInstance()
                 .getClassesInPackage(handlerPackage);
